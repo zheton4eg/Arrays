@@ -6,6 +6,7 @@ void main()
 	setlocale(LC_ALL, "");
 	const int SIZE = 5;
 	int arr[SIZE];
+	
 
 	cout << "Введите элементы массива: ";
 	for (int i = 0; i < SIZE; i++)
@@ -43,4 +44,11 @@ void main()
 	}
 	cout << "Минимальное значение в массиве: " << min << endl;
 	cout << "Максимальное значение в массиве: " << max << endl;
+
+
+	for (int i = 0; i <= SIZE; i++)
+	{
+		cout << arr[i] << tab;
+	}
+	cout << endl;
 }
