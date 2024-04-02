@@ -16,19 +16,15 @@ void main()
 	cout << "Введите минимальное число: "; cin >> minRand;
 	cout << "Введите максимальное число: "; cin >> maxRand;
 
-
-
 #ifdef NUMERICS
 	//заполнение массива случайными числами
 	for (int i = 0; i < n; i++)
 	{
-
 		arr[i] = rand() % (maxRand - minRand) + minRand;
 	}
 
 	//вывод массива на экран
 	for (int i = 0; i < n; i++)
-
 	{
 		for (int j = i + 1; j < n; j++)
 		{
@@ -37,24 +33,17 @@ void main()
 				int buffer = arr[i];
 				arr[i] = arr[j];
 				arr[j] = buffer;
-
 			}
 		}
 	}
 	for (int i = 0; 1 < n; i++)
 	{
-
 		cout << arr[i] << tab;
-
-
 	}
 	cout << endl;
-
-
 #endif // NUMERICS
 
 #ifdef DOMASHKA
-	
 
 	if (maxRand - minRand >= n - 1)
 	{
@@ -66,7 +55,6 @@ void main()
 		for (int i = 0; i < n; i++)
 		{
 			cout << arr[i] << tab;
-
 		}
 		cout << endl;
 
@@ -74,25 +62,20 @@ void main()
 		{
 			for (int j = i + 1; j <= n; j++)
 			{
-
-
 				if (arr[j] == arr[i])
 				{
-					int boofer = arr[i];
+					int buffer = arr[i];
 					arr[j] += arr[j] + 1 <= maxRand;
 					arr[i] = arr[j];
 
-					arr[j] = boofer;
+					arr[j] = buffer;
 				}
-
-
 			}
 		}
 		for (int i = 0; i < n; i++)
 		{
 			for (int j = 0; j <= n; j++)
 			{
-
 				if (arr[j] == arr[i])
 				{
 					int boofer = arr[i];
@@ -101,8 +84,6 @@ void main()
 
 					arr[j] = boofer;
 				}
-
-
 			}
 		}
 		for (int i = 0; i < n; i++)
