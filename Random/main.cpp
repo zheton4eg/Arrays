@@ -65,7 +65,7 @@ void main()
 				if (arr[j] == arr[i])
 				{
 					int buffer = arr[i];
-					arr[j] += arr[j] + 1 <= maxRand;
+					arr[j] +=+ 1 <= maxRand;
 					arr[i] = arr[j];
 
 					arr[j] = buffer;
@@ -79,7 +79,7 @@ void main()
 				if (arr[j] == arr[i])
 				{
 					int boofer = arr[i];
-					arr[j] -= 2 <= arr[n - 1];
+					arr[j] += 2 <= maxRand;
 					arr[i] = arr[j];
 
 					arr[j] = boofer;
