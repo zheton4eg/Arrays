@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 using std::cin;
 using std::cout;
 using std::endl;
@@ -12,20 +12,21 @@ void main()
 	const int n = 10;
 	int arr[n];
 	int minRand, maxRand;
-	cout << "Введите минимальное число: "; cin >> minRand;
-	cout << "Введите максимальное число: "; cin >> maxRand;
+	cout << "РЇ РјРѕРіСѓ РІС‹РІРµСЃС‚Рё РЅР° СЌРєСЂР°РЅ 10 СЃР»СѓС‡Р°Р№РЅС‹С… С†РёС„СЂ, РІРІРµРґРёС‚Рµ С‡РёСЃР»РѕРІРѕР№ РїСЂРѕРјРµР¶СѓС‚РѕРє : "<< endl ;
+	cout << "Р’РІРµРґРёС‚Рµ РјРёРЅРёРјР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ: "; cin >> minRand;
+	cout << "Р’РІРµРґРёС‚Рµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ: "; cin >> maxRand;
 
 
 
 #ifdef NUMERICS
-	//заполнение массива случайными числами
+	//Р·Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё
 	for (int i = 0; i < n; i++)
 	{
 
 		arr[i] = rand() % (maxRand - minRand) + minRand;
 	}
 
-	//вывод массива на экран
+	//РІС‹РІРѕРґ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ
 	for (int i = 0; i < n; i++)
 
 	{
@@ -53,8 +54,9 @@ void main()
 #endif // NUMERICS
 
 #ifdef DOMASHKA
+	
 
-	if (minRand < maxRand)
+	if (maxRand - minRand >= n - 1)
 	{
 		for (int i = 0; i < n; i++)
 		{
@@ -109,9 +111,9 @@ void main()
 		}
 		cout << endl;
 	}
-	else if (minRand >= maxRand)
-		cout << "ОШИБКА! Минимальное значение больше или равно максимальному! Попробуйте еще раз."; cout << endl; main();
-
+	else if (maxRand - minRand <n)
+		cout << "РћРЁРР‘РљРђ! Р Р°Р·РЅРёС†Р° РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ Рё РјРёРЅРёРјР°Р»СЊРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РјРµРЅСЊС€Рµ РґРµСЃСЏС‚Рё! РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·.";
+		cout << endl;
 #endif // DOMASHKA
 
 }
